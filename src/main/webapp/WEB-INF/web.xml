@@ -1,0 +1,77 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>VerifyUser</servlet-name>
+  	<display-name>VerifyUser</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.VerifyUser</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SaveFaculty</servlet-name>
+  	<display-name>SaveFaculty</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.SaveFaculty</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SaveStudent</servlet-name>
+  	<display-name>SaveStudent</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.SaveStudent</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SaveAssignment</servlet-name>
+  	<display-name>SaveAssignment</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.SaveAssignment</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AllAssignmentServlet</servlet-name>
+  	<display-name>AllAssignmentServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.AllAssignmentServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ShowAppliedStudentAccounts</servlet-name>
+  	<display-name>ShowAppliedStudentAccounts</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.ShowAppliedStudentAccounts</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ChangeStatus</servlet-name>
+  	<display-name>ChangeStatus</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.ChangeStatus</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>VerifyUser</servlet-name>
+  	<url-pattern>/VerifyUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SaveFaculty</servlet-name>
+  	<url-pattern>/SaveFaculty</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SaveStudent</servlet-name>
+  	<url-pattern>/SaveStudent</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SaveAssignment</servlet-name>
+  	<url-pattern>/SaveAssignment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AllAssignmentServlet</servlet-name>
+  	<url-pattern>/AllAssignmentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowAppliedStudentAccounts</servlet-name>
+  	<url-pattern>/ShowAppliedStudentAccounts</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ChangeStatus</servlet-name>
+  	<url-pattern>/ChangeStatus</url-pattern>
+  </servlet-mapping>
+</web-app>
