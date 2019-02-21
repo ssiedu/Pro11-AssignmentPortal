@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.hibernate.Session;
 
+import com.ssi.dao.StudentDAO;
 import com.ssi.entities.Faculty;
 import com.ssi.entities.Student;
 
@@ -50,8 +51,12 @@ public class VerifyUser extends HttpServlet {
     		}
     
     	}else if(s3.equals("Student")){
-    		Session session=Data.getSF().openSession();
-    		Student st=session.get(Student.class, s1);
+    		//Session session=Data.getSF().openSession();
+    		//Student st=session.get(Student.class, s1);
+    		
+    		StudentDAO dao=new StudentDAO();
+    		Student st=dao.searchById(s1);
+    		
     		if(st==null){
     			out.println("Invalid Student Id");
     		}else{

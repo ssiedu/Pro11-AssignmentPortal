@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
+import com.ssi.dao.StudentDAO;
 import com.ssi.entities.Student;
 public class SaveStudent extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,12 +20,17 @@ public class SaveStudent extends HttpServlet {
 		String mobile=request.getParameter("mobile");
 		
 		Student s=new Student(email,password,sname,address,mobile);
+	
+		StudentDAO dao=new StudentDAO();
+		dao.saveStudent(s);
 		
-		Session session=Data.getSF().openSession();
+	/*	
+	 * Session session=Data.getSF().openSession();
 		Transaction tr=session.beginTransaction();
 		session.save(s);
 		tr.commit();
 		session.close();
+	*/
 		
 		PrintWriter out=response.getWriter();
 		out.println("Registration Completed");

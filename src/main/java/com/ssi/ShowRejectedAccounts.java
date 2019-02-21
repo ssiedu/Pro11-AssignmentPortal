@@ -13,22 +13,15 @@ import com.ssi.dao.StudentDAO;
 import com.ssi.entities.Student;
 
 /**
- * Servlet implementation class ShowAppliedStudentAccounts
+ * Servlet implementation class ShowRejectedAccounts
  */
-public class ShowAppliedStudentAccounts extends HttpServlet {
-
+public class ShowRejectedAccounts extends HttpServlet {
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+	
 		StudentDAO dao=new StudentDAO();
-		List<Student> students=dao.getAllAccountsByStatus("applied");
+		List<Student> students=dao.getAllAccountsByStatus("rejected");
 		
-		/*
-		Session session=Data.getSF().openSession();
-		Criteria cr=session.createCriteria(Student.class);
-		Criterion crt1=Restrictions.eq("status","applied");
-		cr.add(crt1);
-		List<Student> students=cr.list();
-		*/
 		PrintWriter out=response.getWriter();
 		out.println("<html>");
 		out.println("<body>");
@@ -49,13 +42,14 @@ public class ShowAppliedStudentAccounts extends HttpServlet {
 			out.println("<td>"+mobile+"</td>");
 			out.println("<td>"+email+"</td>");
 			out.println("<td><a href=ChangeStatus?userid="+email+"&status=activated>Activate</a></td>");
-			out.println("<td><a href=ChangeStatus?userid="+email+"&status=rejected>Rejected</a></td>");
+			out.println("<td><a href=DeleteStudentAccount?userid="+email+">Delete</a></td>");
 			out.println("</tr>");
 		}
 		out.println("</table>");
 		out.println("<hr>");
 		out.println("<a href=adminhome.jsp>AdminHome</a><br>");
 		out.println("</body></html>");
+		
 		
 	}
 

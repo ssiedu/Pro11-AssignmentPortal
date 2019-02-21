@@ -46,6 +46,18 @@
   	<description></description>
   	<servlet-class>com.ssi.ChangeStatus</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ShowRejectedAccounts</servlet-name>
+  	<display-name>ShowRejectedAccounts</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.ShowRejectedAccounts</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteStudentAccount</servlet-name>
+  	<display-name>DeleteStudentAccount</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.DeleteStudentAccount</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>VerifyUser</servlet-name>
   	<url-pattern>/VerifyUser</url-pattern>
@@ -73,5 +85,13 @@
   <servlet-mapping>
   	<servlet-name>ChangeStatus</servlet-name>
   	<url-pattern>/ChangeStatus</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowRejectedAccounts</servlet-name>
+  	<url-pattern>/ShowRejectedAccounts</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteStudentAccount</servlet-name>
+  	<url-pattern>/DeleteStudentAccount</url-pattern>
   </servlet-mapping>
 </web-app>
