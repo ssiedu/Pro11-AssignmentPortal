@@ -55,7 +55,7 @@ public class StudentDAO {
 	public void saveStudent(Student student){
 		Session session=sf.openSession();
 		Transaction tr=session.beginTransaction();
-		session.save(student);
+		session.saveOrUpdate(student);
 		tr.commit();
 		session.close();
 	}

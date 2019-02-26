@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.hibernate.Session;
 
@@ -21,6 +22,9 @@ public class VerifyUser extends HttpServlet {
 	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+    	
+    	HttpSession session=request.getSession();
+    	
     	PrintWriter out=response.getWriter();
     	
     	String s1=request.getParameter("id");
@@ -28,22 +32,23 @@ public class VerifyUser extends HttpServlet {
     	String s3=request.getParameter("utype");
 
     	if(s3.equals("Admin")){
-    		
     		if(s1.equals("admin") && s2.equals("indore")){
     			response.sendRedirect("adminhome.jsp");
     		}else{
     			out.println("Invalid Admin Account");
     		}
     	}else if(s3.equals("Faculty")){
+
     		
-    		Session session=Data.getSF().openSession();
-    		Faculty f=session.get(Faculty.class, s1);
+    		Session ses=Data.getSF().openSession();
+    		Faculty f=ses.get(Faculty.class, s1);
     		
     		if(f==null){
     			out.println("Invalid Faculty Code");
     		}else{
     			String p=f.getPassword();
     			if(s2.equals(p)){
+    				session.setAttribute("user", s1);
     				response.sendRedirect("facultyhome.jsp");
     			}else{
     				out.println("wrong password");
@@ -66,6 +71,7 @@ public class VerifyUser extends HttpServlet {
     			
     			String p=st.getPassword();
     			if(s2.equals(p)){
+    				session.setAttribute("user", s1);
     				response.sendRedirect("studenthome.jsp");
     			}else{
     				out.println("wrong password");

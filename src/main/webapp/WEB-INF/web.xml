@@ -58,6 +58,18 @@
   	<description></description>
   	<servlet-class>com.ssi.DeleteStudentAccount</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ShowFacultyAssignments</servlet-name>
+  	<display-name>ShowFacultyAssignments</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.ShowFacultyAssignments</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateProfile</servlet-name>
+  	<display-name>UpdateProfile</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.UpdateProfile</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>VerifyUser</servlet-name>
   	<url-pattern>/VerifyUser</url-pattern>
@@ -93,5 +105,13 @@
   <servlet-mapping>
   	<servlet-name>DeleteStudentAccount</servlet-name>
   	<url-pattern>/DeleteStudentAccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ShowFacultyAssignments</servlet-name>
+  	<url-pattern>/ShowFacultyAssignments</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateProfile</servlet-name>
+  	<url-pattern>/UpdateProfile</url-pattern>
   </servlet-mapping>
 </web-app>

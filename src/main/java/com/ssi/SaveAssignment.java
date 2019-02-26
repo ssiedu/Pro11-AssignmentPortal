@@ -20,7 +20,7 @@ public class SaveAssignment extends HttpServlet {
 		int acode=Integer.parseInt(request.getParameter("acode"));
 		String question=request.getParameter("que");
 		String subject=request.getParameter("subject");
-		String fcode=request.getParameter("fcode");
+		String fcode=(String)request.getSession().getAttribute("user");
 		java.util.Date dt1=new java.util.Date();
 		java.sql.Date dt2=new java.sql.Date(dt1.getTime());
 		

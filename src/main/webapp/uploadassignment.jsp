@@ -13,7 +13,6 @@
 				<option>Hibernate</option>
 				<option>Spring</option>
 				</select>
-	FCode		<input type="text" name="fcode"/>
 				<input type="submit" value="Upload"/>
 	</pre>
 	<hr>
