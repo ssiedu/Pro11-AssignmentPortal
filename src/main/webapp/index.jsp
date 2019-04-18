@@ -1,3 +1,4 @@
+<%@include file="info.jsp" %>
 <html>
 <body>
 <h2>Online-Assignment-Portal</h2>
@@ -23,6 +24,7 @@
 </form>
 <hr>
 <a href="registration.jsp">New-Student-Registration</a><br>
+<a href="recoverpassword.jsp">Forget-Password</a><br>
 <a href="checkstatus.jsp">Check-Account-Status</a>
 </body>
 </html>

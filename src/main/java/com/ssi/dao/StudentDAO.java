@@ -21,6 +21,16 @@ public class StudentDAO {
 		sf=Data.getSF();
 	}
 	
+	public String getPassword(String email){
+		Session session=sf.openSession();
+		Student student=session.get(Student.class, email);
+		if(student==null){
+			return "wrongemail";
+		}else{
+			return student.getPassword();
+		}
+	}
+	
 	public List<Student> getAllAccountsByStatus(String status){
 		Session session=Data.getSF().openSession();
 		Criteria cr=session.createCriteria(Student.class);

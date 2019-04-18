@@ -2,6 +2,7 @@
 <body>
 <h3>Welcome Admin</h3>
 <hr>
+	<a href="studentsearch.jsp">Search-Student</a><br>
 	<a href="fentry.jsp">Create-New-Faculty-Account</a><br>
 	<a href="ShowAppliedStudentAccounts">Student-Account-Activation</a><br>
 	<a href="ShowRejectedAccounts">View-Rejected-Accounts</a><br>

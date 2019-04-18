@@ -70,6 +70,18 @@
   	<description></description>
   	<servlet-class>com.ssi.UpdateProfile</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>StudentSearchController</servlet-name>
+  	<display-name>StudentSearchController</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.StudentSearchController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PasswordRecovery</servlet-name>
+  	<display-name>PasswordRecovery</display-name>
+  	<description></description>
+  	<servlet-class>com.ssi.PasswordRecovery</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>VerifyUser</servlet-name>
   	<url-pattern>/VerifyUser</url-pattern>
@@ -113,5 +125,13 @@
   <servlet-mapping>
   	<servlet-name>UpdateProfile</servlet-name>
   	<url-pattern>/UpdateProfile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>StudentSearchController</servlet-name>
+  	<url-pattern>/StudentSearchController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PasswordRecovery</servlet-name>
+  	<url-pattern>/PasswordRecovery</url-pattern>
   </servlet-mapping>
 </web-app>
